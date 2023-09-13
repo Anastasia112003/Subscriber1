@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,3 +15,4 @@ public class SubscriberDTO {
     private String login;
     private String country;
 }
+

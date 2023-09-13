@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-    public class SubscribeService {
+public class SubscribeService {
     private final SubscriberMapper subscriberMapper;
 
 
@@ -18,13 +18,11 @@ import org.springframework.stereotype.Service;
 
     }
 
-    @KafkaListener(topics = "influencer")
-        public void receiveOrder(InfluencerDTO dto) {
+    @KafkaListener(topics = "manager")
+    public void receiveOrder(InfluencerDTO dto) {
 
-         Influencer influencer=subscriberMapper.toEntity(dto);
+        Influencer influencer = subscriberMapper.toEntity(dto);
         System.out.println(influencer);
-        //subscriberRepository.save( influencer.getSubsList());
-       // log.debug(dto.toString());
-        }
+    }
 
 }

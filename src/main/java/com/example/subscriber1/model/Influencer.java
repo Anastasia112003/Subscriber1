@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name="influencer")
+@Entity(name = "influencer")
 @Table(name = "influencer")
 public class Influencer {
 
@@ -21,7 +21,7 @@ public class Influencer {
     private Long id;
     private Integer subsAmount;
     @OneToMany
-    private List<Subscriber> subsList =new ArrayList<>();
+    private List<Subscriber> subsList = new ArrayList<>();
     private LocalDateTime lastUpdate;
 
 }
